@@ -1,6 +1,6 @@
-package com.sid.springboot.cruddemo.service;
+package com.sid.springboot.thymeleafdemo.service;
 
-import com.sid.springboot.cruddemo.entity.Employee;
+import com.sid.springboot.thymeleafdemo.entity.Employee;
 
 import java.util.List;
 
