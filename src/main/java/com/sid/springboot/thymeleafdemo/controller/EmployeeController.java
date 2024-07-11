@@ -53,4 +53,18 @@ public class EmployeeController {
         return "redirect:/employees/list";
     }
 
+    @GetMapping("/showFormForUpdate")
+    public String update(@RequestParam("employeeId") int theId, Model theModel){
+
+        // get employee from service
+        Employee theEmployee = employeeService.findById(theId);
+
+        // set employee in model to populate the form
+        theModel.addAttribute("employee", theEmployee);
+
+        // send over to our form
+        return "employees/employee-form";
+    }
+
+
 }
