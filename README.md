@@ -68,6 +68,12 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 For any inquiries, please contact sidharthm673@gmail.com
 
+### Sample Images
+1. List Employee
+   ![Screenshot from 2024-07-20 20-27-58](https://github.com/user-attachments/assets/4d900cd8-584a-48d4-b55f-6d68d9ef4a13)
+2. Add Employee
+   ![Screenshot from 2024-07-20 20-28-18](https://github.com/user-attachments/assets/f2bca7fa-3c6c-4d52-aaf5-83df5dad461c)
+
 
 
 
