@@ -8,12 +8,14 @@ This project is a web application built with Spring Boot that allows users to ad
 - Update existing employee details
 - Delete employees
 - View a list of all employees
+- Logging using AOP
 
 ### Technologies Used
 - Spring Boot: Framework for building the web application
 - JPA/Hibernate: For Object-Relational Mapping (ORM) with MySQL
 - MySQL: Database for storing employee information
 - Thymeleaf: For server-side rendering of web pages
+- Aspect-Oriented Programming (AOP): For logging using @Before and @AfterReturning advices
 
 ### Pre-requisites
 - Java Development Kit (JDK) 8 or higher
