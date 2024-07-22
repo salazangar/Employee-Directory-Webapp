@@ -1,7 +1,7 @@
-package com.sid.springboot.thymeleafdemo.service;
+package com.sid.springboot.service;
 
-import com.sid.springboot.thymeleafdemo.dao.EmployeeRepository;
-import com.sid.springboot.thymeleafdemo.entity.Employee;
+import com.sid.springboot.dao.EmployeeRepository;
+import com.sid.springboot.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

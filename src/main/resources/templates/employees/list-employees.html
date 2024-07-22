@@ -12,11 +12,12 @@
 
 <div class="container">
 
-    <h3>Employee Directory</h3>
+    <br>
+    <h2><b>Employee Directory</b></h2>
     <hr>
 
     <!-- Add a button -->
-    <a th:href="@{/employees/showFormForAdd}"
+    <a th:href="@{/employees/showAddForm}"
         class="btn btn-primary btn-sm mb-3">
         Add Employee
     </a>
@@ -39,7 +40,7 @@
                 <td th:text="${tempEmployee.email}" />
                 <!-- Add update button link -->
                 <td>
-                    <a th:href="@{/employees/showFormForUpdate(employeeId=${tempEmployee.id})}"
+                    <a th:href="@{/employees/showUpdateForm(employeeId=${tempEmployee.id})}"
                        class="btn btn-info btn-sm ">
                         Update
                     </a>

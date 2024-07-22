@@ -1,6 +1,6 @@
-package com.sid.springboot.thymeleafdemo.dao;
+package com.sid.springboot.dao;
 
-import com.sid.springboot.thymeleafdemo.entity.Employee;
+import com.sid.springboot.entity.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.sid.springboot.thymeleafdemo;
+package com.sid.springboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

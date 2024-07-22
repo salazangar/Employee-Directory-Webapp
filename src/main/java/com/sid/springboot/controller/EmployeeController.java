@@ -1,7 +1,7 @@
-package com.sid.springboot.thymeleafdemo.controller;
+package com.sid.springboot.controller;
 
-import com.sid.springboot.thymeleafdemo.entity.Employee;
-import com.sid.springboot.thymeleafdemo.service.EmployeeService;
+import com.sid.springboot.entity.Employee;
+import com.sid.springboot.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,7 +20,7 @@ public class EmployeeController {
         employeeService = theEmployeeService;
     }
 
-    @GetMapping("/list")
+    @GetMapping("/listEmployees")
     public String listEmployees(Model theModel){
 
         // get the employees from db
@@ -32,15 +32,15 @@ public class EmployeeController {
         return "employees/list-employees";
     }
 
-    @GetMapping("/showFormForAdd")
-    public String showFormForAdd(Model theModel){
+    @GetMapping("/showAddForm")
+    public String showAddForm(Model theModel){
 
         // create model attribute to bind the data
         Employee theEmployee = new Employee();
 
         theModel.addAttribute("employee", theEmployee);
 
-        return "employees/employee-form";
+        return "employees/employee-form-add";
     }
 
     @PostMapping("/save")
@@ -50,11 +50,11 @@ public class EmployeeController {
         employeeService.save(theEmployee);
 
         // use a redirect  to prevent multiple submissions
-        return "redirect:/employees/list";
+        return "redirect:/employees/listEmployees";
     }
 
-    @GetMapping("/showFormForUpdate")
-    public String update(@RequestParam("employeeId") int theId, Model theModel){
+    @GetMapping("/showUpdateForm")
+    public String updateEmployee(@RequestParam("employeeId") int theId, Model theModel){
 
         // get employee from service
         Employee theEmployee = employeeService.findById(theId);
@@ -63,7 +63,7 @@ public class EmployeeController {
         theModel.addAttribute("employee", theEmployee);
 
         // send over to our form
-        return "employees/employee-form";
+        return "employees/employee-form-update";
     }
 
     @GetMapping("/delete")
@@ -72,7 +72,7 @@ public class EmployeeController {
         employeeService.deleteById(theId);
 
         // redirect to employee list
-        return "redirect:/employees/list";
+        return "redirect:/employees/listEmployees";
     }
 
 }
